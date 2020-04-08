@@ -1,15 +1,14 @@
 #include <Arduino.h>
 
-#define LED_BUILTIN 1
-#define BLINK_DELAY 1000
+#define MSG "Hello World!"
+#define LOOP_DELAY 1000
+#define SERIAL_BAUDRATE 115200
 
 void setup() {
-  pinMode(LED_BUILTIN, OUTPUT);
+  Serial.begin(SERIAL_BAUDRATE);
 }
 
 void loop() {
-  digitalWrite(LED_BUILTIN, HIGH);
-  delay(BLINK_DELAY);
-  digitalWrite(LED_BUILTIN, LOW);
-  delay(BLINK_DELAY);
+  Serial.println(MSG);
+  delay(LOOP_DELAY);
 }

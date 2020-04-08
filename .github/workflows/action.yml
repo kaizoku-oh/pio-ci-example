@@ -31,4 +31,4 @@ jobs:
         pip install platformio
 
     - name: Run PlatformIO
-      run: platformio run -e esp32dev
+      run: platformio run -e esp32dev -e nodemcuv2
