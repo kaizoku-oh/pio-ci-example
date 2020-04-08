@@ -1,6 +1,5 @@
 name: PlatformIO CI
 
-
 # Trigger the workflow on push or pull request,
 # for the master and dev branches
 on:
@@ -30,5 +29,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install platformio
 
-    - name: Run PlatformIO
+    - name: Code static analysis
+      run: platformio check -v
+
+    - name: Run PlatformIO build on selected platforms
       run: platformio run -e esp32dev -e nodemcuv2
