@@ -1,15 +1,18 @@
 name: PlatformIO CI
 
-on: [push]
-  branches: [master]
-
+on:
+  # Trigger the workflow on push,
+  # but only for the master branch
+  push:
+    branches:
+      - master
 jobs:
   build:
 
     runs-on: ubuntu-latest
 
     steps:
-    - name: Copying repo to container
+    # Copy repo to container
     - uses: actions/checkout@v2
     - name: Set up Python
       uses: actions/setup-python@v1
@@ -18,4 +21,4 @@ jobs:
         python -m pip install --upgrade pip
         pip install platformio
     - name: Run PlatformIO
-      run: platformio run /path/to/project/dir -e <ID_1> -e <ID_2> -e <ID_N>
+      run: platformio run -e esp32dev
