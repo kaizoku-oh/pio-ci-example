@@ -2,4 +2,4 @@
 
 ![](https://github.com/kaizoku-619/esp32_ci/workflows/PlatformIO%20CI/badge.svg)
 
-ESP32 continuous integration with PlatformIO (Arduino framework) using GitHub Actions 🚀
+ESP32 continuous integration with PlatformIO demo using GitHub Actions and badges.
