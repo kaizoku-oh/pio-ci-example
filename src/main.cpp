@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
 #define LED_BUILTIN 1
-#define BLINK_DELAY 500
+#define BLINK_DELAY 1000
 
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
