@@ -5,7 +5,9 @@
 #endif // ESP32
 #define INTERVAL 500
 
+// LED state used for toggling the LED
 uint8_t ledState = LOW;
+// The last time we processsed something inside the loop
 unsigned long previousMillis = 0;
 
 void setup() {
