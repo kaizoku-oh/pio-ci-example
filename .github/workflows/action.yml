@@ -1,14 +1,9 @@
 name: PlatformIO CI
 
-# Trigger the workflow on push or pull request,
-# for the master and dev branches
+# Because a PR results in a push; this workflow will run when a PR is merged
+# or when a commit is pushed directly to the master or the dev branch.
 on:
   push:
-    branches:
-      - master
-      - dev
-
-  pull_request:
     branches:
       - master
       - dev
