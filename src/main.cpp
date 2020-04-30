@@ -15,7 +15,7 @@
 #define LOOP_INTERVAL 500
 
 uint8_t ledState = LOW;
-uint32_t previousMillis = 0;
+uint32_t earlierMillis = 0;
 
 void setup() {
   WiFiManager wifiManager;
@@ -25,11 +25,11 @@ void setup() {
 }
 
 void loop() {
-  uint32_t currentMillis;
+  uint32_t nowMillis;
 
-  currentMillis = millis();
-  if ((currentMillis - previousMillis) >= LOOP_INTERVAL) {
-    previousMillis = currentMillis;
+  nowMillis = millis();
+  if((nowMillis - earlierMillis) >= LOOP_INTERVAL) {
+    earlierMillis = nowMillis;
     ledState = (ledState == LOW) ? HIGH : LOW;
     digitalWrite(LED_BUILTIN, ledState);
   }
