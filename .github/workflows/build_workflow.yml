@@ -24,6 +24,6 @@ jobs:
 
     - name: Run PlatformIO build on selected platforms
       run: platformio run -e esp32dev -e nodemcuv2
-    
-    - name: Code static analysis
-      run: platformio check
+
+    # - name: Code static analysis
+    #   run: platformio check
