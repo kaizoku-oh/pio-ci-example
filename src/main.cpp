@@ -1,12 +1,4 @@
 #include <Arduino.h>
-#if defined(ESP8266)
-#include <ESP8266WiFi.h>
-#include <ESP8266WebServer.h>
-#elif defined(ESP32)
-#include <WiFi.h>
-#include <WebServer.h>
-#endif
-#include <DNSServer.h>
 #include <WiFiManager.h>
 
 #if defined(ESP32)
